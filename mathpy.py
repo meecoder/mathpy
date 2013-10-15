@@ -1,6 +1,7 @@
 #mathpy, puts together all sub-apps
 
-from random import randint
+from random import randint, choice
+global realans
 
 def mathpyrun():
 	print "press 1 for addition, 2 for subtraction, 3 for multiplication, and 4 for division."
@@ -83,10 +84,8 @@ def mathpyrun():
 		ansint = int(ans)
 		
 		if(n1 == pre1):
-			global realans
 			realans = pre2
 		else:
-			global realans
 			realans = pre1
 			
 		
