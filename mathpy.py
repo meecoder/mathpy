@@ -4,7 +4,7 @@ from random import randint, choice
 global realans
 
 def mathpyrun():
-	print "press 1 for addition, 2 for subtraction, 3 for multiplication, and 4 for division."
+	print "press 1 for addition, 2 for subtraction, 3 for multiplication, 4 for division, and 5 for exponents."
 	mathtype = input("press number, then press enter:  ")
 	mathtypei = int(mathtype)
 	
@@ -97,8 +97,27 @@ def mathpyrun():
 		else:
 			print "Incorrect. The answer is: " 
 			print realans
+	elif(mathtypei == 5):
+		n1 = randint(0, 10)
+			
+		n2 = randint(0, 10)
+			
+		print "first number to second number power:"
+		print n1
+		print n2
+			
+		ans = input("answer: ")
+		
+		realans = n1 ** n2
+			
+		ansint = int(ans)
+		
+		if (ansint == realans):
+			print "Correct!"
+		else:
+			print "Incorrect. The answer is: " 
+			print realans
 	else:
 		print "Please type 1, 2, 3, or 4."
-		mathpyrun()			
-
+		mathpyrun()	
 mathpyrun()
