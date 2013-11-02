@@ -4,7 +4,7 @@ from random import randint, choice
 global realans
 
 def mathpyrun():
-	print "press 1 for addition, 2 for subtraction, 3 for multiplication, 4 for division, and 5 for exponents."
+	print("press 1 for addition, 2 for subtraction, 3 for multiplication, 4 for division, and 5 for exponents.")
 	mathtype = input("press number, then press enter:  ")
 	mathtypei = int(mathtype)
 	
@@ -13,9 +13,9 @@ def mathpyrun():
 	
 		n2 = randint(0, 1000)
 	
-		print "add:"
-		print n1
-		print n2
+		print("add:")
+		print(n1)
+		print(n2)
 	
 		ans = input("answer: ")
 	
@@ -24,18 +24,18 @@ def mathpyrun():
 		ansint = int(ans)
 	
 		if (ansint == realans):
-			print "Correct!"
+			print("Correct!")
 		else:
-			print "Incorrect. The answer is: " 
-			print realans
+			print("Incorrect. The answer is:")
+			print(realans)
 	elif(mathtypei == 2):
 		n1 = randint(0, 1000)
 	
 		n2 = randint(0, n1)
 	
-		print "subtract:"
-		print n1
-		print n2
+		print("subtract:")
+		print(n1)
+		print(n2)
 		
 		ans = input("answer: ")
 		
@@ -44,19 +44,19 @@ def mathpyrun():
 		ansint = int(ans)
 		
 		if (ansint == realans):
-			print "Correct!"
+			print("Correct!")
 		else:
-			print "Incorrect. The answer is: " 
-			print realans
+			print("Incorrect. The answer is:")
+			print(realans)
 	elif(mathtypei == 3):
 	
 		n1 = randint(0, 1000)
 		
 		n2 = randint(0, 99)
 		
-		print "multiply:"
-		print n1
-		print n2
+		print("multiply:")
+		print(n1)
+		print(n2)
 		
 		ans = input("answer: ")
 		
@@ -65,10 +65,10 @@ def mathpyrun():
 		ansint = int(ans)
 		
 		if (ansint == realans):
-			print "Correct!"
+			print("Correct!")
 		else:
-			print "Incorrect. The answer is: " 
-			print realans
+			print("Incorrect. The answer is: ")
+			print(realans)
 	elif(mathtypei == 4):
 		pre1 = randint(1, 50)
 		pre2 = randint(1, 50)
@@ -76,9 +76,9 @@ def mathpyrun():
 		pre = [pre1, pre2]
 		n1 = choice(pre)
 		
-		print "divide first number by second number:"
-		print n2
-		print n1
+		print("divide first number by second number:")
+		print(n2)
+		print(n1)
 		
 		ans = input("answer: ")
 		ansint = int(ans)
@@ -93,18 +93,18 @@ def mathpyrun():
 		 
 		
 		if (ansint == realans):
-			print "Correct!"
+			print("Correct!")
 		else:
-			print "Incorrect. The answer is: " 
-			print realans
+			print("Incorrect. The answer is: " )
+			print(realans)
 	elif(mathtypei == 5):
 		n1 = randint(0, 10)
 			
 		n2 = randint(0, 10)
 			
-		print "first number to second number power:"
-		print n1
-		print n2
+		print("first number to second number power:")
+		print(n1)
+		print(n2)
 			
 		ans = input("answer: ")
 		
@@ -113,11 +113,11 @@ def mathpyrun():
 		ansint = int(ans)
 		
 		if (ansint == realans):
-			print "Correct!"
+			print("Correct!")
 		else:
-			print "Incorrect. The answer is: " 
-			print realans
+			print("Incorrect. The answer is: ")
+			print(realans)
 	else:
-		print "Please type 1, 2, 3, or 4."
+		print("Please type 1, 2, 3, or 4.")
 		mathpyrun()	
 mathpyrun()
