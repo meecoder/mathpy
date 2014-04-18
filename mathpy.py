@@ -4,30 +4,47 @@ from random import randint, choice
 global realans
 
 def mathpyrun():
+	correct = 0
+	incorrect = 0
 	print("press 1 for addition, 2 for subtraction, 3 for multiplication, 4 for division, and 5 for exponents.")
 	mathtype = input("press number, then press enter:  ")
+	mathnum = input("Type how many problems, then press enter:  ")
 	mathtypei = int(mathtype)
-	
+	i=1
 	if(mathtypei == 1):
-		n1 = randint(0, 1000)
-	
-		n2 = randint(0, 1000)
-	
-		print("add:")
-		print(n1)
-		print(n2)
-	
-		ans = input("answer: ")
-	
-		realans = n1 + n2
-	
-		ansint = int(ans)
-	
-		if (ansint == realans):
-			print("Correct!")
-		else:
-			print("Incorrect. The answer is:")
-			print(realans)
+		while(i <= mathnum):
+			n1 = randint(0, 1000)
+		
+			n2 = randint(0, 1000)
+		
+			print("add:")
+			print(n1)
+			print(n2)
+		
+			ans = input("answer: ")
+		
+			realans = n1 + n2
+		
+			ansint = int(ans)
+		
+			if (ansint == realans):
+				print ("Correct!")
+				correct += 1
+			else:
+				print("Incorrect. The answer is:")
+				print(realans)
+				incorrect += 1
+			i += 1
+		print("------STATISTICS------")
+		print("Correct:")
+		print(correct)
+		print("  ")
+		print("Incorrect:")
+		print(incorrect)
+		percent = (float(correct) / float(mathnum) * 100.0)
+		percent = str(percent)
+		print(" ")
+		print(percent + '% correct')
 	elif(mathtypei == 2):
 		n1 = randint(0, 1000)
 	
