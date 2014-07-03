@@ -11,7 +11,10 @@ def mathpyrun():
 	mathnum = input("Type how many problems, then press enter:  ")
 	mathtypei = int(mathtype)
 	i=1
-	if(mathtypei == 1):
+	if(mathtypei > 5 or mathtypei < 1):
+		print("Please type 1, 2, 3, 4, or 5.")
+		mathpyrun()
+	elif(mathtypei == 1): #Addition
 		while(i <= mathnum):
 			n1 = randint(0, 1000)
 		
@@ -31,21 +34,11 @@ def mathpyrun():
 				print ("Correct!")
 				correct += 1
 			else:
-				print("Incorrect. The answer is:")
-				print(realans)
+				print("Incorrect. The answer is: " + str(realans))
+				
 				incorrect += 1
 			i += 1
-		print("------STATISTICS------")
-		print("Correct:")
-		print(correct)
-		print("  ")
-		print("Incorrect:")
-		print(incorrect)
-		percent = (float(correct) / float(mathnum) * 100.0)
-		percent = str(percent)
-		print(" ")
-		print(percent + '% correct')
-	elif(mathtypei == 2):
+	elif(mathtypei == 2): #Subtraction
 		while(i <= mathnum):
 			n1 = randint(0, 1000)
 	
@@ -65,21 +58,11 @@ def mathpyrun():
 				print("Correct!")
 				correct += 1
 			else:
-				print("Incorrect. The answer is:")
-				print(realans)
+				print("Incorrect. The answer is: " + str(realans))
+				
 				incorrect += 1
 			i += 1
-		print("------STATISTICS------")
-		print("Correct:")
-		print(correct)
-		print("  ")
-		print("Incorrect:")
-		print(incorrect)
-		percent = (float(correct) / float(mathnum) * 100.0)
-		percent = str(percent)
-		print(" ")
-		print(percent + '% correct')
-	elif(mathtypei == 3):
+	elif(mathtypei == 3): #Multiplication
 		while(i <= mathnum):
 			n1 = randint(0, 1000)
 			
@@ -99,21 +82,11 @@ def mathpyrun():
 				print("Correct!")
 				correct += 1
 			else:
-				print("Incorrect. The answer is: ")
-				print(realans)
+				print("Incorrect. The answer is: " + str(realans))
+				
 				incorrect += 1
 			i += 1
-		print("------STATISTICS------")
-		print("Correct:")
-		print(correct)
-		print("  ")
-		print("Incorrect:")
-		print(incorrect)
-		percent = (float(correct) / float(mathnum) * 100.0)
-		percent = str(percent)
-		print(" ")
-		print(percent + '% correct')
-	elif(mathtypei == 4):
+	elif(mathtypei == 4): #Division
 		while(i <= mathnum):
 	
 			pre1 = randint(1, 50)
@@ -138,21 +111,11 @@ def mathpyrun():
 				print("Correct!")
 				correct += 1
 			else:
-				print("Incorrect. The answer is: " )
-				print(realans)
+				print("Incorrect. The answer is: " + str(realans))
+				
 				incorrect += 1
 			i += 1
-		print("------STATISTICS------")
-		print("Correct:")
-		print(correct)
-		print("  ")
-		print("Incorrect:")
-		print(incorrect)
-		percent = (float(correct) / float(mathnum) * 100.0)
-		percent = str(percent)
-		print(" ")
-		print(percent + '% correct')
-	elif(mathtypei == 5):
+	elif(mathtypei == 5): #Exponents
 		while(i <= mathnum):
 			n1 = randint(0, 10)
 				
@@ -172,21 +135,28 @@ def mathpyrun():
 				print("Correct!")
 				correct += 1
 			else:
-				print("Incorrect. The answer is: ")
-				print(realans)
+				print("Incorrect. The answer is: " + str(realans))
+				
 				incorrect += 1
-			i += 1
-		print("------STATISTICS------")
-		print("Correct:")
-		print(correct)
-		print("  ")
-		print("Incorrect:")
-		print(incorrect)
-		percent = (float(correct) / float(mathnum) * 100.0)
-		percent = str(percent)
-		print(" ")
-		print(percent + '% correct')
-	else:
-		print("Please type 1, 2, 3, or 4.")
-		mathpyrun()	
+			i += 1	
+	##Statistics displayed here##
+	print("------STATISTICS------")
+	print("Correct: " + str(correct))
+	print("Incorrect: " + str(incorrect))
+	percent = (float(correct) / float(mathnum) * 100.0)
+	percent = str(percent)
+	print(" ")
+	print(percent + '% correct')
+	print(" ")
+	print(" ")
+	print(" ")
+	def rerun():
+		rerun = input("Press 1 to do more problems. Press 0 to quit.  ")
+		if(rerun == 1):
+			mathpyrun()
+		else:
+			print("Thank you for using mathpy. Made by Kian Moretz, 2013-2014.")
+			print(" ")
+			print(" ")
+	rerun()
 mathpyrun()
